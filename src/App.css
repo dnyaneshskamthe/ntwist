@@ -21,7 +21,7 @@
 }
 .logo>img{
   width:20%;
-  padding: 20px;
+  padding: 10px 20px;
 }
 .nav-menu{
   width:45%;
@@ -32,7 +32,7 @@
   display: flex;
   justify-content: space-around;
   list-style: none;
-  padding: 20px;
+  padding:10px 20px;
 }
 .nav-bar>li:hover{
   /* text-decoration: underline; */
@@ -213,7 +213,8 @@
   .nav-bar > li {
     padding: 10px;
   }
-  .content {
+  .content , .mine,.sustain{
+    justify-content: center;
     flex-direction: column;
   }
   .left {
@@ -253,7 +254,8 @@
   .nav-bar > li {
     padding: 10px;
   }
-  .content {
+  .content , .mine,.sustain{
+    justify-content: center;
     flex-direction: column;
   }
   .left {
@@ -280,3 +282,127 @@
   }
 }
 
+
+
+/* Default styles for the header (visible on larger screens) */
+.header-bar {
+  width: 100%;
+  padding: 20px 0;
+  transition: background-color 0.3s, color 0.3s;
+  /* Your other header styles here */
+}
+
+.header-bar .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1150px; /* Limit the width for larger screens */
+  margin: 0 auto; /* Center the header horizontally */
+  padding: 0 20px;
+}
+
+.header-bar .logo {
+  /* Your logo styles here */
+}
+
+.header-bar .nav-menu {
+  /* Your menu styles here */
+}
+
+/* Styles for the mobile menu icon */
+.mobile-menu-icon {
+  display: none; /* Hide the mobile menu icon by default */
+  cursor: pointer;
+}
+
+.mobile-menu-icon .bar {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  margin: 6px 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Media query for screens less than 1150px */
+@media (max-width: 1150px) {
+  /* Hide the default header for smaller screens */
+  .header-bar {
+    display: none;
+  }
+
+  /* Show the mobile menu icon and adjust its position */
+  .mobile-menu-icon {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1000;
+  }
+
+  /* Change the appearance of the bars when the mobile menu is open */
+  .mobile-menu-icon .bar.open:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .mobile-menu-icon .bar.open:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-icon .bar.open:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  /* Styles for the mobile menu */
+  .mobile-menu {
+    display: block;
+    background-color: white;
+    position: absolute;
+    top: 70px; /* Adjust the top position as needed */
+    right: 20px; /* Adjust the right position as needed */
+    width: 200px; /* Set the width of the mobile menu */
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    /* Your mobile menu styles here */
+  }
+
+  .mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    /* Your mobile menu list styles here */
+  }
+
+  .mobile-menu li {
+    margin-bottom: 10px;
+    /* Your mobile menu item styles here */
+  }
+}
+
+.mobile-menu-icon {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Styles for the bars when the mobile menu is open */
+.mobile-menu-icon.open .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.mobile-menu-icon.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-icon.open .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}

@@ -89,7 +89,7 @@ const Content = () => {
                 <p className='copywrite'>© 2022. Ntwist Inc.</p>
         </div>
         <div>
-            <button class="back-to-top" id="scrollToTopBtn" onClick={() => { window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}><img src="up.svg"/></button>
+            <button class="back-to-top" id="scrollToTopBtn" onClick={() => { window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}><img src="up.svg" alt=""/></button>
         </div>
     </div>
   )
